@@ -1,0 +1,35 @@
+
+
+
+
+
+    <div class="col-sm-12 " style="background-color: rgb(107, 11, 91); padding: 10px">
+       <div style="text-align: center" *ngFor="let user of users;let ind = index" >
+        <img  src="{{user.imageUrl}}">
+      </div> 
+            <div style="text-align: center;color: rgb(22, 3, 3)"  >
+                
+                  <div  *ngFor="let user of users;let ind = index" >
+                    
+                        <p>{{user.name}}</p>
+                        <h5>{{user.title}} </h5>
+                        <h5>price: {{user.price}}</h5>
+                        <h5>latest Review Date: {{user.latestReviewDate}}</h5>
+                        <h5>Domain: {{user.domain}}</h5>
+                        <h5>ProductId: {{user.product_id}}</h5>
+                        <h5>reviewCount:{{user.reviewCount}}</h5>
+                        <h3>Top Scores Review</h3>
+                      <div *ngFor="let topScore of user.topScores;let ind = index">
+                          <h5>{{topScore.topic}}:{{topScore.score}}</h5>
+                      </div >
+                        
+
+                   
+                </div> 
+          
+          
+                
+            </div>
+        
+      
+    </div>
